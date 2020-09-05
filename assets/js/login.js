@@ -33,7 +33,7 @@ $(function () {
         //阻止表单的默认提交行为
 
         e.preventDefault()
-        //发起ajax请求
+        //发起ajax POST请求
         var data = {
             username: $('#form_reg [name=username]').val(),
             password: $('#form_reg [name=password]').val()
@@ -60,7 +60,7 @@ $(function () {
             username: $('#form_login [name=username]').val(),
             password: $('#form_login [name=password]').val()
         };
-        //发起ajax请求
+        //发起ajax POST请求
         $.post('http://ajax.frontend.itheima.net/api/login', data, function (res) {
             if (res.status !== 0) {
                 return layer.msg('登录失败！')
