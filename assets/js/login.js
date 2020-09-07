@@ -67,7 +67,7 @@ $(function () {
             };
             layer.msg('登录成功！');
             //登录成功后把token 保存到本地
-            localStorage.setItem("token ", res.token);
+            localStorage.setItem("token", res.token);
             //登录完成后跳转到主页面
             location.href = '/index.html'
         })
